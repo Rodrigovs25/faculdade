@@ -1,0 +1,8 @@
+Pratica 1: Modularização com matrizes
+
+componente -> abstração da entidade 
+interface -> a exportação, usar o modulo
+modelo -> é a abstração
+tipos de dados: dominio da variavel
+estrutura de dados: implementação do TADs
+robustez -> aumentar o desempenho, limitar a abstração
