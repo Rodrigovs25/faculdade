@@ -1,0 +1,46 @@
+A pequena Valentina gostava muito de brincar com árvores binárias. Seu jogo favorito era construir árvores 
+binárias aleatórias com letras em maiúsculo nos nodos.
+
+Este é um exemplo de uma de suas criações:
+ 
+
+D
+/ \
+/   \
+B     E
+/ \     \
+/   \     \
+A     C     G
+          /
+        /
+      F
+ 
+
+Para salvar suas árvores para uso futuro, ela escreveu duas strings para cada árvore: o percurso prefixo 
+(raíz, sub-árvore esquerda, sub-árvore direita) e o percurso infixo (sub-árvore esquerda, raíz, sub-árvore direita).
+
+Para o desenho acima o percurso prefixo é DBACEGF e o infixo é ABCDEFG.
+
+Agora, anos depois, olhando para as strings, ela notou que reconstruir as árvores era realmente possível, mas 
+só porque ela não havia usado a mesma letra duas vezes na mesma árvore.
+
+Reconstruir a árvore a mão tornou-se chato.
+
+Então agora ela pede que você escreva um programa que faça o trabalho por ela!
+
+Entrada
+A entrada irá conter um ou mais casos de teste. Cada caso de teste consiste em uma linha contendo duas strings 
+representando o percurso prefixo e infixo de uma árvore binária. Ambas as strings consistem de letras maiúsculas, 
+sem repetir. (Então elas não são maiores de 26 caracteres.)
+
+Entrada termina com EOF (fim de arquivo).
+
+Saída
+Para cada caso de teste, imprima uma linha com o percurso posfixo (sub-árvore esquerda, sub-árvore direita, raíz).
+
+Exemplo de Entrada	Exemplo de Saída
+DBACEGF ABCDEFG
+BCAD CBAD
+
+ACBFGED
+CDAB
