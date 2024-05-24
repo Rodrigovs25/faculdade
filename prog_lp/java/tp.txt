@@ -1,0 +1,80 @@
+Entendo que você precise de um documento estruturado para apresentar o trabalho. Abaixo está um exemplo de como você pode organizar um documento em formato de texto. Lembre-se de converter isso em um formato de documento adequado, como PDF, para atender aos requisitos do seu trabalho.
+
+---
+
+# Documentação: Implementação do Tipo Abstrato de Dados "Conjunto"
+
+## 1. Introdução
+
+Este documento fornece uma visão geral da implementação do tipo de dado abstrato Conjunto em Java, conforme as especificações do trabalho. Cada seção destaca aspectos específicos da implementação, incluindo estrutura de dados, algoritmos, utilização do código, organização do código e testes realizados.
+
+## 2. Estrutura de Dados
+
+A estrutura de dados escolhida para representar conjuntos em Java é a classe `HashSet`. Esta classe oferece uma implementação eficiente de conjuntos, garantindo que os elementos sejam únicos e não ordenados.
+
+## 3. Algoritmos
+
+### 3.1 `ehVazio()`
+O método `ehVazio()` verifica se o conjunto está vazio usando o método `isEmpty()` da classe `HashSet`.
+
+### 3.2 `uniaoConj(Conjunto conjuntoB)`
+O método `uniaoConj` realiza a união de dois conjuntos, criando um novo conjunto e adicionando todos os elementos dos conjuntos A e B.
+
+### 3.3 `intersConj(Conjunto conjuntoB)`
+O método `intersConj` realiza a interseção de dois conjuntos, criando um novo conjunto e mantendo apenas os elementos presentes em ambos os conjuntos.
+
+### 3.4 `diffConj(Conjunto conjuntoB)`
+O método `diffConj` calcula a diferença entre dois conjuntos, criando um novo conjunto e removendo os elementos do conjunto B do conjunto A.
+
+### 3.5 `diffSimConj(Conjunto conjuntoB)`
+O método `diffSimConj` calcula a diferença simétrica entre dois conjuntos, criando um novo conjunto com os elementos que estão presentes em apenas um dos conjuntos.
+
+### 3.6 `addConj(int elemento)`
+O método `addConj` adiciona um elemento ao conjunto usando o método `add()` da classe `HashSet`.
+
+### 3.7 `remConj(int elemento)`
+O método `remConj` remove um elemento do conjunto usando o método `remove()` da classe `HashSet`.
+
+### 3.8 `tamConj()`
+O método `tamConj` retorna o tamanho do conjunto usando o método `size()` da classe `HashSet`.
+
+### 3.9 `ehElemConj(int elemento)`
+O método `ehElemConj` verifica se um elemento está presente no conjunto usando o método `contains()` da classe `HashSet`.
+
+## 4. Utilização do Código
+
+Para utilizar a implementação do Conjunto em Java, siga estas etapas:
+
+1. **Instancie um objeto Conjunto:**
+   ```java
+   Conjunto conjuntoA = new Conjunto();
+   ```
+
+2. **Realize Operações:**
+   ```java
+   conjuntoA.addConj(1);
+   conjuntoA.addConj(2);
+
+   Conjunto conjuntoB = new Conjunto();
+   conjuntoB.addConj(2);
+   conjuntoB.addConj(3);
+
+   Conjunto uniao = conjuntoA.uniaoConj(conjuntoB);
+   ```
+
+3. **Obtenha Resultados:**
+   ```java
+   System.out.println("União: " + uniao.elementos);
+   ```
+
+## 5. Organização do Código
+
+O código está organizado em uma única classe `Conjunto`. Métodos são utilizados para representar cada operação. Comentários são adicionados para facilitar a compreensão.
+
+## 6. Testes
+
+Os testes foram realizados usando o método `main` da classe. Exemplos de testes incluem a verificação da união, interseção, diferença, diferença simétrica, entre outros. 
+
+---
+
+Adapte este exemplo conforme necessário para refletir os detalhes específicos de sua implementação em Java. Certifique-se de adicionar mais detalhes conforme necessário para atender às exigências do seu trabalho.

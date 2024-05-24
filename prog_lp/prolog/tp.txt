@@ -1,0 +1,70 @@
+# Documentação: Implementação do Tipo Abstrato de Dados "Conjunto" em Prolog
+
+Este documento descreve a implementação do tipo de dado abstrato Conjunto em Prolog, seguindo as especificações do trabalho. As operações de conjunto são implementadas como regras em Prolog.
+
+## 1. Operações de Conjunto em Prolog
+
+### 1.1 `uniaoConj(ConjuntoA, ConjuntoB, Resultado)`
+
+Realiza a união de dois conjuntos, onde `Resultado` é o conjunto resultante da união de `ConjuntoA` e `ConjuntoB`.
+
+### 1.2 `intersConj(ConjuntoA, ConjuntoB, Resultado)`
+
+Realiza a interseção de dois conjuntos, onde `Resultado` é o conjunto resultante da interseção de `ConjuntoA` e `ConjuntoB`.
+
+### 1.3 `diffConj(ConjuntoA, ConjuntoB, Resultado)`
+
+Calcula a diferença entre dois conjuntos (A - B), onde `Resultado` é o conjunto resultante da diferença de `ConjuntoA` e `ConjuntoB`.
+
+### 1.4 `diffSimConj(ConjuntoA, ConjuntoB, Resultado)`
+
+Calcula a diferença simétrica entre dois conjuntos (A Δ B), onde `Resultado` é o conjunto resultante da diferença simétrica de `ConjuntoA` e `ConjuntoB`.
+
+### 1.5 `addConj(Elemento, Conjunto, Resultado)`
+
+Adiciona o elemento `Elemento` ao conjunto `Conjunto`, onde `Resultado` é o conjunto resultante após a adição.
+
+### 1.6 `remConj(Elemento, Conjunto, Resultado)`
+
+Remove o elemento `Elemento` do conjunto `Conjunto`, onde `Resultado` é o conjunto resultante após a remoção.
+
+### 1.7 `tamConj(Conjunto, Tamanho)`
+
+Retorna o tamanho do conjunto `Conjunto` em `Tamanho`.
+
+### 1.8 `ehElemConj(Elemento, Conjunto)`
+
+Verifica se o elemento `Elemento` está presente no conjunto `Conjunto`.
+
+## 2. Utilização das Operações
+
+### 2.1 Consultas Exemplo
+
+```prolog
+% Exemplo de consulta para união
+?- uniaoConj([1, 2, 3], [2, 3, 4], Resultado).
+% Resultado = [1, 2, 3, 4].
+
+% Exemplo de consulta para interseção
+?- intersConj([1, 2, 3], [2, 3, 4], Resultado).
+% Resultado = [2, 3].
+
+% Exemplo de consulta para diferença
+?- diffConj([1, 2, 3], [2, 3, 4], Resultado).
+% Resultado = [1].
+
+% Exemplo de consulta para diferença simétrica
+?- diffSimConj([1, 2, 3], [2, 3, 4], Resultado).
+% Resultado = [1, 4].
+
+% Outros exemplos podem ser testados de maneira semelhante.
+```
+
+## 3. Observações
+
+- Certifique-se de adicionar fatos representando seus próprios conjuntos antes de realizar consultas.
+- Utilize as operações de acordo com as necessidades específicas do seu programa.
+
+---
+
+Adapte este exemplo conforme necessário para refletir os detalhes específicos da sua implementação em Prolog. Certifique-se de adicionar mais detalhes conforme necessário para atender às exigências do seu trabalho.

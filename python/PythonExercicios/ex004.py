@@ -1,0 +1,12 @@
+n = input('Digite algo: ')
+print('Esse exemplo é', (type(n)))
+print('Só tem espaços?', n.isspace())
+print('Ele é númerico?', n.isnumeric())
+print('Ele é alfabético?', n.isalpha())
+print('Ele é alfanumérico?', n.isalnum())
+print('Ele é um decimal?', n.isdecimal())
+print('Ele é minúsculo?', n.islower())
+print('Ele é maiúsculo?', n.isupper())
+print('Está capitalizada?', n.istitle()) #Mistura de maiúsculo e minúsculo
+print('Ele é um digito?', n.isdigit())
+print('Verificação concluída')
