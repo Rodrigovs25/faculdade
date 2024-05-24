@@ -1,0 +1,20 @@
+O problema deste código é que está sendo realizada uma divisão por zero, em c=a/b. Para corrigir, foi colocado um "if" que só realiza a operação se o divisor é diferente de 0.
+
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\arthu\OneDrive\Área de Trabalho\PA03\c16.exe...done.
+(gdb) run
+Starting program: C:\Users\arthu\OneDrive\Área de Trabalho\PA03/c16.exe
+[New Thread 15376.0x60c]
+[New Thread 15376.0x1da0]
+
+Program received signal SIGFPE, Arithmetic exception.
+0x0040146a in actual_calc (a=13, b=0) at c16.c:6
+6         c=a/b;

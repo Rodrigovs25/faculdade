@@ -1,0 +1,19 @@
+O problema é que a variável fact não recebeu um valor inicial, logo foi atribuído a ela um valor aleatório, gerando uma saída inesperada. A correção aplicada foi inicializar a variavel com valor 1.
+
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\arthu\OneDrive\Área de Trabalho\PA03\c14.exe...done.
+(gdb) run
+Starting program: C:\Users\arthu\OneDrive\Área de Trabalho\PA03/c14.exe
+[New Thread 14156.0x4118]
+[New Thread 14156.0x4bb0]
+Positive integer:4
+Factorial 4 = 97320960
+[Inferior 1 (process 14156) exited normally]
