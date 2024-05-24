@@ -1,0 +1,9 @@
+Rodrigo Viana Souza, 2020054803
+    O programa utilizado foi o matnomod.c da prática 1. 
+    A maioria das funções desse programa tem um loop de for acessado a memória de maneira estático, o que utiliza 
+grande parte da memória para realizar as funções. O programa tem a localidade de referência espacial, já que aumenta
+a probalidade de acessar as próximas de posições de memória. Dessa forma, será feito uma análise específica das funções
+acessaMatriz, imprimeMatriz, salvaMatriz, copiaMatriz, somaMatrizes, multiplicaMatrizes e transpoeMatriz. Dentre essas
+funções a somaMatrizes, multiplicaMatrizes e transpoeMatriz vão apresentar um comportamento mais crítico, visto que 
+fazem a manipulação de três matrizes ao mesmo tempo, o que pode ocasionar em um maior acesso da memória cache e se as 
+matrizes tiveram muitos números, o acesso a memória ficará mais crítico. 

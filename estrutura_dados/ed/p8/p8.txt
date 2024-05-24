@@ -1,0 +1,12 @@
+Para o programa a ser caracterizado em termos de padrão de acesso à memória e localidade de referência, elabore 
+a segunda parte do roteiro:
+
+1.Selecionar as estruturas de dados a serem monitorizadas
+
+2.Selecionar as funções a serem instrumentadas
+
+3.Definir as fases de monitoramento
+
+4.Instrumentar o código (pelo menos parcialmente)
+
+Obs: não é necessário que o código instrumentado compile corretamente.
