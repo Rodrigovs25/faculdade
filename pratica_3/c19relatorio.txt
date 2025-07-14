@@ -1,0 +1,23 @@
+O problema do código em questão é que não é alocada memória para a variavel buf previamente, oque pode resultar na alocação de memória em local aleatório. Como forma de correção, foi inserido um malloc na função "printSum".
+
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\arthu\OneDrive\Área de Trabalho\PA03\c19.exe...done.
+(gdb) run
+Starting program: C:\Users\arthu\OneDrive\Área de Trabalho\PA03/c19.exe
+[New Thread 20128.0x1058]
+[New Thread 20128.0x1160]
+enter a number:
+4
+warning: Invalid parameter passed to C runtime function.
+
+warning: Invalid parameter passed to C runtime function.
+
+[Inferior 1 (process 20128) exited normally]

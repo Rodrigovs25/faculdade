@@ -1,0 +1,39 @@
+    No programa 4, há um problema de alocação de memória na hora de desalocar a matriz, pois o free não é 
+utilizado para desalocar as linhas das matrizes e também há um free(text) que não deveria existir, visto que 
+não tem nenhuma alocação no text anteriormente, assim acontece um segmentation fault no programa, como 
+mostrado no valgrind:
+
+==2267== Memcheck, a memory error detector
+==2267== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2267== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==2267== Command: ./c4
+==2267== 
+==2267== Use of uninitialised value of size 8
+==2267==    at 0x10917A: main (c4.c:13)
+==2267== 
+==2267== Invalid write of size 4
+==2267==    at 0x10917A: main (c4.c:13)
+==2267==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==2267== 
+==2267== 
+==2267== Process terminating with default action of signal 11 (SIGSEGV)
+==2267==  Access not within mapped region at address 0x0
+==2267==    at 0x10917A: main (c4.c:13)
+==2267==  If you believe this happened as a result of a stack
+==2267==  overflow in your program's main thread (unlikely but
+==2267==  possible), you can try to increase the size of the
+==2267==  main thread stack using the --main-stacksize= flag.
+==2267==  The main thread stack size used in this run was 8388608.
+==2267== 
+==2267== HEAP SUMMARY:
+==2267==     in use at exit: 0 bytes in 0 blocks
+==2267==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==2267== 
+==2267== All heap blocks were freed -- no leaks are possible
+==2267== 
+==2267== Use --track-origins=yes to see where uninitialised values come from
+==2267== For lists of detected and suppressed errors, rerun with: -s
+==2267== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+
+    Para corrigir o problema foi feito a alocação do struct matriz, a desalocação das linhas das matrizes e a
+retirada do free do text.

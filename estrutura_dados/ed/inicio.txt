@@ -1,0 +1,2 @@
+//g++ pratica7.cpp
+//./a.out < in.txt

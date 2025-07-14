@@ -1,0 +1,9 @@
+Rodrigo Viana Souza, 2020054803
+
+    O critério de balanceamento da árvores binárias de pesquisa escolhido é garantir que a diferença entre as alturas
+da sub-árvores da direita e esquerda seja de no máximo 2. Snedo assim, a altura de qualquer sub-árvore não pode ser
+maior que a outra sub-árvore em mais de 2 unidades. 
+    O critério vai balanceia a árvore, pois é uma variação do critério AVL, o que permite uma diferença entre as 
+alturas da sub-árvores. Isso vai permitir um bom desempenho da busca e uso de operações de inclusão e remoção 
+eficientes, mesmo que essa árvore fique um pouco menos balanceada que as árvores AVL.
+    No código , terá que ser feito modificações na inserção e remoção de nós na árvore.

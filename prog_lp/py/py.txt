@@ -1,0 +1,26 @@
+Relatório: Implementação do Tipo Abstrato de Dados "Conjunto"
+1. Introdução
+
+Este relatório descreve a implementação do tipo de dado abstrato Conjunto em quatro linguagens de programação: Python, Java, SML e Prolog. Cada implementação segue os paradigmas de programação específicos para as linguagens mencionadas.
+2. Python (Paradigma Imperativo)
+2.1 Estrutura de Dados
+
+A implementação em Python utiliza uma lista para representar conjuntos.
+2.2 Algoritmos
+
+    ehVazio(): Verifica se a lista de elementos está vazia.
+    uniaoConj(conjuntoB): Realiza a união de dois conjuntos usando operações de conjunto em listas.
+    ...
+
+2.3 Utilização do Código
+
+    Instancie um objeto Conjunto.
+    Utilize os métodos para realizar operações em conjuntos.
+
+2.4 Organização do Código
+
+O código está organizado em uma classe Conjunto com métodos representando cada operação. Comentários foram adicionados para clareza.
+2.5 Testes
+
+    Inclua exemplos de testes realizados.
+    Destaque casos de teste abrangentes para cada operação.

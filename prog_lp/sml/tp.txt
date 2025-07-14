@@ -1,0 +1,68 @@
+# Documentação: Implementação do Tipo Abstrato de Dados "Conjunto" em SML
+
+Este documento descreve a implementação do tipo de dado abstrato Conjunto em Standard ML (SML) seguindo as especificações do trabalho. As operações de conjunto são implementadas utilizando listas e funções em SML.
+
+## 1. Estrutura de Dados
+
+O tipo de dado abstrato Conjunto é representado como uma lista de inteiros (`int list`). As operações são implementadas como funções que manipulam listas para realizar as operações de conjunto.
+
+## 2. Operações
+
+### 2.1 `ehVazio(A: conjunto) : bool`
+Verifica se o conjunto `A` é vazio, retornando `true` se vazio e `false` caso contrário.
+
+### 2.2 `uniaoConj(A: conjunto, B: conjunto) : conjunto`
+Realiza a união de dois conjuntos `A` e `B`, retornando um novo conjunto.
+
+### 2.3 `intersConj(A: conjunto, B: conjunto) : conjunto`
+Realiza a interseção de dois conjuntos `A` e `B`, retornando um novo conjunto.
+
+### 2.4 `diffConj(A: conjunto, B: conjunto) : conjunto`
+Calcula a diferença de dois conjuntos (A - B), retornando um novo conjunto.
+
+### 2.5 `diffSimConj(A: conjunto, B: conjunto) : conjunto`
+Calcula a diferença simétrica de dois conjuntos (A Δ B), retornando um novo conjunto.
+
+### 2.6 `addConj(x: int, A: conjunto) : conjunto`
+Adiciona o elemento `x` ao conjunto `A`, retornando o conjunto modificado.
+
+### 2.7 `remConj(x: int, A: conjunto) : conjunto`
+Remove o elemento `x` do conjunto `A`, retornando o conjunto modificado.
+
+### 2.8 `tamConj(A: conjunto) : int`
+Retorna o tamanho do conjunto `A`.
+
+### 2.9 `ehElemConj(x: int, A: conjunto) : bool`
+Verifica se o elemento `x` está presente no conjunto `A`, retornando `true` se presente e `false` caso contrário.
+
+## 3. Utilização do Código
+
+Para utilizar a implementação do Conjunto em SML, siga estas etapas:
+
+1. **Defina Conjuntos:**
+   ```sml
+   val conjuntoA = [1, 2, 3];
+   val conjuntoB = [2, 3, 4];
+   ```
+
+2. **Realize Operações:**
+   ```sml
+   val uniao = Conjunto.uniaoConj(conjuntoA, conjuntoB);
+   ```
+
+3. **Obtenha Resultados:**
+   ```sml
+   print ("União: " ^ Int.toString (length uniao) ^ "\n");
+   ```
+
+## 4. Organização do Código
+
+O código está organizado dentro da estrutura `Conjunto`, contendo funções para cada operação. Cada função é responsável por manipular listas e produzir resultados conforme especificado.
+
+## 5. Testes
+
+Testes foram realizados utilizando valores de exemplo para cada operação. Exemplos de testes incluem a verificação da união, interseção, diferença, diferença simétrica, entre outros.
+
+---
+
+Adapte este exemplo conforme necessário para refletir os detalhes específicos de sua implementação em SML. Certifique-se de adicionar mais detalhes conforme necessário para atender às exigências do seu trabalho.

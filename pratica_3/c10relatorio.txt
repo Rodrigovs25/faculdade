@@ -1,0 +1,30 @@
+Devido ao loop estar condicionado a "while(1)", o programa estava alocando memória infinitamente. Para evitar isso, foi implementada uma condição de parada diferente para o loop.
+
+==4337== Process terminating with default action of signal 3 (SIGQUIT)
+==4337==    at 0x4124B93: __write_nocancel (syscall-template.S:84)
+==4337==    by 0x40B80B0: _IO_file_write@@GLIBC_2.1 (fileops.c:1263)
+==4337==    by 0x40B73E3: new_do_write (fileops.c:518)
+==4337==    by 0x40B912C: _IO_do_write@@GLIBC_2.1 (fileops.c:494)
+==4337==    by 0x40B9517: _IO_file_overflow@@GLIBC_2.1 (fileops.c:851)
+==4337==    by 0x40B879D: _IO_file_xsputn@@GLIBC_2.1 (fileops.c:1331)
+==4337==    by 0x4091A56: vfprintf (vfprintf.c:1663)
+==4337==    by 0x414433D: __printf_chk (printf_chk.c:35)
+==4337==    by 0x8048498: printf (stdio2.h:104)
+==4337==    by 0x8048498: main (c10.c:10)
+71081640
+==4337== 
+==4337== HEAP SUMMARY:
+==4337==     in use at exit: 1,345,536 bytes in 10,512 blocks
+==4337==   total heap usage: 10,513 allocs, 1 frees, 1,346,560 bytes allocated
+==4337== 
+==4337== LEAK SUMMARY:
+==4337==    definitely lost: 1,345,408 bytes in 10,511 blocks
+==4337==    indirectly lost: 0 bytes in 0 blocks
+==4337==      possibly lost: 0 bytes in 0 blocks
+==4337==    still reachable: 128 bytes in 1 blocks
+==4337==         suppressed: 0 bytes in 0 blocks
+==4337== Rerun with --leak-check=full to see details of leaked memory
+==4337== 
+==4337== For counts of detected and suppressed errors, rerun with: -v
+==4337== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Quit (core dumped)

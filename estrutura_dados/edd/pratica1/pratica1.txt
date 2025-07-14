@@ -1,0 +1,40 @@
+A tarefa da aula prática 1 é converter o TAD vetor estático para alocação dinâmica, onde o vetor_tipo deve ser definido 
+como:
+
+typedef struct vetor{
+
+        double * m;
+
+        int tam;
+
+        int id;
+
+} vetor_tipo;
+
+A conversão deve atender a quatro requisitos:
+- A única alteração do vet.h é na definição do vetor_tipo
+- Apenas o arquivo vet.c deve ser alterado, não se esqueça de revisitar as primitivas
+- Demais arquivos não devem ser alterados.
+Você deve utilizar a linguagem C ou C++ para o desenvolvimento. O uso de estruturas pré-implementadas pelas 
+bibliotecas-padrão da linguagem ou terceiros é  terminantemente vetado.
+
+Submeta um arquivo zip contendo os arquivos elaborados.
+
+Você DEVE manter a estrutura de projeto abaixo:
+    - TP
+
+        |- src
+
+        |- bin
+
+        |- obj
+
+        |- include
+
+        Makefile
+
+
+A pasta TP é a raiz do projeto; a pasta bin deve estar vazia; src deve armazenar arquivos de código (*.c, *.cpp ou *.cc); 
+a pasta include, os cabeçalhos (headers) do projeto, com extensão *.h, por fim a pasta obj deve estar vazia. O Makefile 
+deve estar na raiz do projeto. A execução do comando "make all" deve gerar os códigos objeto *.o no diretório obj, 
+o executável no diretório bin e o programa compilado é executado para as 3 opções de operação.
