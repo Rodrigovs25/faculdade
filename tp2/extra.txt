@@ -1,0 +1,108 @@
+✅ Extra Credit 1: Load Balancing (10%)
+🎯 Objetivo
+Usar múltiplos caminhos de custo igual para um destino e escolher aleatoriamente um deles ao encaminhar um pacote.
+
+🧠 Passos de implementação
+1. Modifique self.routing_table:
+Deixe de ser {dest: (next_hop, cost)} e passe a ser:
+
+python
+Copiar
+Editar
+self.routing_table = {}  # dest -> [(next_hop, total_cost), ...]
+2. Atualize handle_update:
+Substitua:
+
+python
+Copiar
+Editar
+self.routing_table[dest] = (src, total_cost)
+Por algo assim:
+
+python
+Copiar
+Editar
+routes = self.routing_table.get(dest, [])
+
+# Remove qualquer rota antiga do mesmo vizinho
+routes = [r for r in routes if r[0] != src]
+
+# Adiciona nova rota
+routes.append((src, total_cost))
+
+# Filtra apenas as rotas com menor custo
+min_cost = min(r[1] for r in routes)
+best_routes = [r for r in routes if r[1] == min_cost]
+
+self.routing_table[dest] = best_routes
+3. Atualize forward_message
+Substitua:
+
+python
+Copiar
+Editar
+next_hop = self.routing_table[destination][0]
+Por:
+
+python
+Copiar
+Editar
+import random
+next_hops = self.routing_table[destination]
+next_hop = random.choice([r[0] for r in next_hops])
+4. Atualize send_updates para usar o menor custo:
+python
+Copiar
+Editar
+for destination, routes in self.routing_table.items():
+    if not isinstance(routes, list):
+        routes = [routes]  # compatibilidade
+    best_route = min(routes, key=lambda x: x[1])
+    next_hop, cost = best_route
+    if next_hop != neighbor_ip:
+        distances[destination] = cost
+✅ Extra Credit 2: Control Messages (5%)
+🎯 Objetivo
+Notificar a origem de um pacote que ele não pode ser entregue, com uma mensagem type: "control".
+
+🧠 Passos de implementação
+Na função forward_message, onde hoje você tem:
+
+python
+Copiar
+Editar
+if destination not in self.routing_table:
+    print(f"[ERRO] Sem rota para {destination}")
+    return
+Substitua por:
+
+python
+Copiar
+Editar
+if destination not in self.routing_table:
+    print(f"[ERRO] Sem rota para {destination}")
+    # Enviar mensagem de controle para o originador
+    if "source" in message:
+        control_msg = {
+            "type": "control",
+            "source": self.address,
+            "destination": message["source"],
+            "reason": f"no route to {destination}"
+        }
+        self.sock.sendto(json.dumps(control_msg).encode(), (message["source"], PORT))
+    return
+Opcional: Mostrar mensagem control
+Adicione em handle_message:
+
+python
+Copiar
+Editar
+elif msg_type == "control":
+    print(f"[CONTROL] Falha: {msg['reason']}")
+✅ Resultado
+Extra Credit	Implementado?	Benefício
+Load balancing	✅	10% extra
+Control messages	✅	5% extra
+
+🚀 Quer que eu envie o código atualizado com ambos aplicados?
+Ou você prefere que eu te ajude a aplicar no seu próprio passo a passo?
