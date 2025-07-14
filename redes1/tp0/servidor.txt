@@ -1,0 +1,1 @@
+o servidor pugna.snes.dcc.ufmg.br (150.164.213.243, 2804:1f4a:dcc:ff03::1) e porta 51001
