@@ -1,1 +1,1 @@
-# Trabalhos da faculdade
+# Trabalhos da faculdade nas disciplinas
